@@ -34,17 +34,17 @@ public class UserManager implements UserService {
 	public void register(User user) {
 		
 		if (user.getFirstName().length() < 2 || user.getLastName().length() < 2) {
-			System.out.println("Adýnýz ve soyadýnýz en az iki karakter olmalý");
+			System.out.println("AdÃ½nÃ½z ve soyadÃ½nÃ½z en az iki karakter olmalÃ½");
 		}
 		else if (user.getPassword().length() < 6 ) {
-			System.out.println("Daha güvenli bir þifre için þifreniz en az 6 karakterden oluþmalýdýr");
+			System.out.println("Daha gÃ¼venli bir Ã¾ifre iÃ§in Ã¾ifreniz en az 6 karakterden oluÃ¾malÃ½dÃ½r");
 		}
 		else if (mailControl(user) == false) {
 			
-			System.out.println("Girmiþ olduðunuz mail adresi daha önce kullanýlmýþtýr.");
+			System.out.println("GirmiÃ¾ olduÃ°unuz mail adresi daha Ã¶nce kullanÃ½lmÃ½Ã¾tÃ½r.");
 		}
 		else if (user.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$") == false) {
-			System.out.println("Girmiþ olduðunuz mail adresi formata uygun deðildir.");
+			System.out.println("GirmiÃ¾ olduÃ°unuz mail adresi formata uygun deÃ°ildir.");
 		}
 		else {
 
@@ -53,7 +53,7 @@ public class UserManager implements UserService {
 		}
 		
 
-		//	mail doðrulama regex formatý	"^[A-Za-z0-9+_.-]+@(.+)$"
+		//	mail doÃ°rulama regex formatÃ½	"^[A-Za-z0-9+_.-]+@(.+)$"
 		
 
 	}
@@ -70,19 +70,9 @@ public class UserManager implements UserService {
 			}
 		}
 		
-		System.out.println("Email veya parola hatalý tekrar deneyiniz");
-		
-		
-		
-		
-		
-		
-		
-	//	for (var mailPassword : userDao.getAll()) {	
-//		if(mailPassword.getEmail() == user.getEmail() && mailPassword.getPassword() == user.getPassword()) {
-//				userDao.login(user);
-//			}
-//		}
+		System.out.println("Email veya parola hatalÃ½ tekrar deneyiniz");
+			
+
 	}
 
 	@Override
@@ -93,7 +83,7 @@ public class UserManager implements UserService {
 
 	@Override
 	public void emailConfirm() {
-		System.out.println("Email doðrulandý, üyeliðiniz tamamlanmýþtýr");
+		System.out.println("Email doÃ°rulandÃ½, Ã¼yeliÃ°iniz tamamlanmÃ½Ã¾tÃ½r");
 		System.out.println("------------------------------------------------------");
 		
 	}
